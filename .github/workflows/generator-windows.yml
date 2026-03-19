@@ -183,6 +183,9 @@ jobs:
           fi
           find ./src/lang -name "*.rs" -exec sed -i -e 's|RustDesk|${{ env.appname }}|' {} \;
           sed -i -e 's|RustDesk|${{ env.appname }}|' ./res/msi/Package/License.rtf
+          sed -i -e 's|stun.l.google.com:19302|localhost|' ./src/common.rs
+          sed -i -e 's|stun.cloudflare.com:3478|localhost|' ./src/common.rs
+          sed -i -e 's|stun.nextcloud.com:3478|localhost|' ./src/common.rs
 
       - name: fix registry if appname has a space
         if: contains(env.appname, ' ')
