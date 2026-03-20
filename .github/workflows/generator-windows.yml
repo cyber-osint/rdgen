@@ -186,6 +186,9 @@ jobs:
           sed -i -e 's|stun.l.google.com:19302|localhost|' ./src/common.rs
           sed -i -e 's|stun.cloudflare.com:3478|localhost|' ./src/common.rs
           sed -i -e 's|stun.nextcloud.com:3478|localhost|' ./src/common.rs
+          sed -i -e 's|원격 ID 입력|원격 IP 입력|' ./src/lang/ko.rs
+          sed -i -e 's|이 혼란스러운 세상에서 마음을 담아 만들었습니다! - 한국어 번역: 비너스걸|made by 사법정보화실 이학인 주무관|' ./src/lang/ko.rs
+          sed -i -e 's|이 ID와 비밀번호로 데스크탑에 액세스할 수 있습니다.|IP로 데스크탑에 액세스할 수 있습니다.|' ./src/lang/ko.rs
 
       - name: fix registry if appname has a space
         if: contains(env.appname, ' ')
