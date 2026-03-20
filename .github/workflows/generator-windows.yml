@@ -162,6 +162,7 @@ jobs:
           sparse-checkout: |
             src/lang/ko.rs
             flutter/lib/desktop/pages/desktop_home_page.dart
+            ‎flutter/lib/common/widgets/peer_tab_page.dart
           sparse-checkout-cone-mode: false
 
       - name: Copy custom ko.rs
@@ -169,6 +170,7 @@ jobs:
         run: |
           cp _custom_lang_repo/src/lang/ko.rs ./src/lang/ko.rs
           cp _custom_lang_repo/flutter/lib/desktop/pages/desktop_home_page.dart ./flutter/lib/desktop/pages/desktop_home_page.dart
+          cp _custom_lang_repo/flutter/lib/common/widgets/peer_tab_page.dart ./flutter/lib/common/widgets/peer_tab_page.dart
           rm -rf _custom_lang_repo
           
       - name: change appname to custom
